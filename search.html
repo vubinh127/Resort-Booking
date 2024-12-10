@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" scr="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+    <header class="header-box-full-top scroll-active">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="header-box-logo">
+                    <a class="navbar-brand" href="#">
+                        <img src="/assets/images/logo_nosub.svg" alt="VIETNAM BOOKING" />
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vé máy bay</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Du lịch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Khách sạn</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Visa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Combo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="pb-5">
+            <div class="container detail_hotel_page">
+                <div class="hotel-box-form-search type-cat type-default">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="hotel-box-form-search-mid hotel-box-form-search-inner" style="display: block">
+                                <div class="hotel-box-form-search-inner type-default">
+                                    <div class="hotel-box-name box-input-item">
+                                        <svg class="svg-inline--fa fa-location-dot" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path></svg><!-- <i class="fa-solid fa-location-dot"></i> Font Awesome fontawesome.com -->
+                                        <input value="" placeholder="Nhập địa điểm hoặc tên khách sạn" class="hotel-name form-control" type="text">
+                                    </div>
+    
+                                    <div class="input-daterange">
+                                        <div class="hotel-box-date-start box-input-item">
+                                            <svg class="svg-inline--fa fa-calendar-days" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-days" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"></path></svg><!-- <i class="fa-solid fa-calendar-days"></i> Font Awesome fontawesome.com -->
+                                            <input value="" required="" placeholder="Ngày nhận phòng" class="hotel-date-start form-control" type="text">
+                                        </div>
+                                        <div class="hotel-box-date-end box-input-item">
+                                            <svg class="svg-inline--fa fa-calendar-days" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-days" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"></path></svg><!-- <i class="fa-solid fa-calendar-days"></i> Font Awesome fontawesome.com -->
+                                            <input value="" required="" placeholder="Ngày trả phòng" class="hotel-date-end form-control" type="text">
+                                        </div>
+                                    </div>
+    
+                                    <div class="hotel-box-passenger box-input-item">
+                                        <svg class="svg-inline--fa fa-user" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"></path></svg><!-- <i class="fa-solid fa-user"></i> Font Awesome fontawesome.com -->
+                                        <input readonly="" value="1 phòng, 1 khách" placeholder="Số phòng và khách" class="hotel-info-passenger form-control" type="text">
+    
+                                        <div class="dropdown-menu" aria-labelledby="dLabel">
+                                            <div class="box-dropdown-content">
+                                                <div class="box-item">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="title">Phòng</span>
+                                                                </td>
+                                                                <td class="td-box-action">
+                                                                    <div>
+                                                                        <span data-name="room" data-type="minus" class="type-minus type-room type-button">
+                                                                            <svg class="svg-inline--fa fa-minus" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="minus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path></svg><!-- <i class="fas fa-minus"></i> Font Awesome fontawesome.com -->
+                                                                        </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span data-min="1" data-max="10" class="type-room type-show">1</span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span data-name="room" class="type-plus type-room type-button" data-type="plus">
+                                                                            <svg class="svg-inline--fa fa-plus" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"></path></svg><!-- <i class="fas fa-plus"></i> Font Awesome fontawesome.com -->
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="title">Người lớn</span>
+                                                                </td>
+                                                                <td class="td-box-action">
+                                                                    <div>
+                                                                        <span data-name="adult" data-type="minus" class="type-minus type-adult type-button">
+                                                                            <svg class="svg-inline--fa fa-minus" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="minus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path></svg><!-- <i class="fas fa-minus"></i> Font Awesome fontawesome.com -->
+                                                                        </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span data-min="1" data-max="10" class="type-adult type-show">1</span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span data-name="adult" data-type="plus" class="type-plus type-adult type-button">
+                                                                            <svg class="svg-inline--fa fa-plus" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"></path></svg><!-- <i class="fas fa-plus"></i> Font Awesome fontawesome.com -->
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+    
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="title">Trẻ em</span>
+                                                                </td>
+                                                                <td class="td-box-action">
+                                                                    <div>
+                                                                        <span data-name="child" data-type="minus" class="type-minus type-child type-button disabled">
+                                                                            <svg class="svg-inline--fa fa-minus" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="minus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path></svg><!-- <i class="fas fa-minus"></i> Font Awesome fontawesome.com -->
+                                                                        </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span data-min="0" data-max="9" class="type-child type-show">0</span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span data-name="child" data-type="plus" class="type-plus type-child type-button">
+                                                                            <svg class="svg-inline--fa fa-plus" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"></path></svg><!-- <i class="fas fa-plus"></i> Font Awesome fontawesome.com -->
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="hotel-box-submit"><button class="hotel-btn-submit hotel-btn-submit-form-data" type="button">Tìm kiếm</button></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="breadcrumb" class="hotel-breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Khách sạn</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Khách sạn Riva Vũng Tàu</li>
+                    </ol>
+                  </nav>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="hotel-system-filter d-none d-lg-block">
+                            <div class="hotel-cat-column-filter">
+                                <div class="box-list-item">
+                                    <div class="box-item hotel-single-cat">
+                                        <h3>Lọc theo giá (VND)</h3>
+                                        <div class="content">
+                                            <div class="hotel-cat-product slider-box-show-price">
+                                                <span class="from">0</span> - <span class="to">6,348,000</span>
+                                            </div>
+                                            <div class="hotel-cat-slider-range ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                                id="hotel-cat-slider-range">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-item hotel-single-cat">
+                                        <h3>Lọc theo hạng sao</h3>
+                                        <div class="content">
+                                            <div data-filter="rs" class="box-filter">
+                                                <div><label><input type="checkbox" value="5" wfd-id="id15"> <i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i></label> </div>
+                                                <div><label><input type="checkbox" value="4" wfd-id="id16"> <i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                                                </div>
+                                                <div><label><input type="checkbox" value="3" wfd-id="id17"> <i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i></label> </div>
+                                                <div><label><input type="checkbox" value="2" wfd-id="id18"> <i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i></label> </div>
+                                                <div><label><input type="checkbox" value="1" wfd-id="id19"> <i class="fas fa-star"></i></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-item hotel-single-cat">
+                                        <h3>Loại phòng</h3>
+                                        <div class="content">
+                                            <div data-filter="pt" class="box-filter">
+                                                <div>
+                                                    <label><input type="checkbox" value="0" wfd-id="id20"> Phòng riêng</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="1" wfd-id="id21"> Nguyên căn</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-item hotel-single-cat">
+                                        <h3>Loại hình ở</h3>
+                                        <div class="content">
+                                            <div data-filter="ht" class="box-filter type-collapse">
+                                                <div>
+                                                    <label><input type="checkbox" value="1" wfd-id="id22"> Khách sạn</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="2" wfd-id="id23"> Khách sạn căn hộ</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="4" wfd-id="id24"> Resort</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="5" wfd-id="id25"> Homestay</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="6" wfd-id="id26"> Ecolodge</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="7" wfd-id="id27"> Nhà nghỉ nông thôn</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="8" wfd-id="id28"> Nhà nghỉ trang trại</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="9" wfd-id="id29"> Nhà nghỉ ven đường</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="10" wfd-id="id30"> Nhà nghỉ mát</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="11" wfd-id="id31"> Nhà nghỉ B&amp;B</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="12" wfd-id="id32"> Glamping</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="13" wfd-id="id33"> Ryokan</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="14" wfd-id="id34"> Riad</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="15" wfd-id="id35"> Khu cắm trại</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="16" wfd-id="id36"> Nhà khách</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="17" wfd-id="id37"> Nhà trọ</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="18" wfd-id="id38"> Nhà Gỗ</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="19" wfd-id="id39"> Nhà thuyền</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="20" wfd-id="id40"> Nhà nhỏ</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="21" wfd-id="id41"> Căn hộ chung cư</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="22" wfd-id="id42"> Biệt thự</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="23" wfd-id="id43"> Căn hộ Studio</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="25" wfd-id="id44"> Căn hộ dịch vụ</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-item hotel-single-cat">
+                                        <h3>Quận huyện</h3>
+                                        <div class="content">
+                                            <div data-filter="a-district" class="box-filter type-collapse">
+                                                <div>
+                                                    <label><input type="checkbox" value="Hồng Bàng" wfd-id="id45"> Hồng Bàng</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="An Dương" wfd-id="id46"> An Dương</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Thủy Nguyên" wfd-id="id47"> Thủy Nguyên</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Cát Bà" wfd-id="id48"> Cát Bà</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Cát Hải" wfd-id="id49"> Cát Hải</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Dương Kinh" wfd-id="id50"> Dương Kinh</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Quận Ngô Quyền" wfd-id="id51"> Quận Ngô Quyền</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Lê Chân" wfd-id="id52"> Lê Chân</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Hải An" wfd-id="id53"> Hải An</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Ngô Quyền" wfd-id="id54"> Ngô Quyền</label>
+                                                </div>
+                                                <div>
+                                                    <label><input type="checkbox" value="Đồ Sơn" wfd-id="id55"> Đồ Sơn</label>
+                                                </div>
+                                            </div>
+                                            <p data-type="a-district" class="btn-readmore">
+                                                <span class="when-less">Hiển thị tất cả Quận huyện </span>
+                                                <span class="when-full hidden">Hiện thị ít hơn</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="box-item hotel-single-cat">
+                                        <h3>Tiện Nghi</h3>
+                                        <div class="content">
+                                            <div data-filter="hf" class="box-filter">
+                                                <div><label><input type="checkbox" value="101" wfd-id="id56">Wifi</label></div>
+                                                <div><label><input type="checkbox" value="103" wfd-id="id57">Phòng không hút thuốc</label></div>
+                                                <div><label><input type="checkbox" value="104" wfd-id="id58">Khu vực hút thuốc</label></div>
+                                                <div><label><input type="checkbox" value="109" wfd-id="id59">Dịch vụ phòng</label></div>
+                                                <div><label><input type="checkbox" value="119" wfd-id="id60">Trạm sạc điện xe hơi</label></div>
+                                                <div><label><input type="checkbox" value="206" wfd-id="id61">Bàn làm việc</label></div>
+                                                <div><label><input type="checkbox" value="408" wfd-id="id62">Nhà hàng</label></div>
+                                                <div><label><input type="checkbox" value="503" wfd-id="id63">Lễ tân 24h</label></div>
+                                                <div><label><input type="checkbox" value="901" wfd-id="id64">Hồ bơi</label></div>
+                                                <div><label><input type="checkbox" value="906" wfd-id="id65">Tiện Nghi Spa</label></div>
+                                                <div><label><input type="checkbox" value="914" wfd-id="id66">Trung tâm thể dục</label></div>
+                                                <div><label><input type="checkbox" value="917" wfd-id="id67">Sân gôn [tại chỗ nghỉ]</label></div>
+                                                <div><label><input type="checkbox" value="934" wfd-id="id68">Câu lạc bộ đêm</label></div>
+                                                <div><label><input type="checkbox" value="1105" wfd-id="id69">Đưa đón sân bay</label></div>
+                                                <div><label><input type="checkbox" value="1101" wfd-id="id70">Bãi đỗ xe</label></div>
+                                                <div><label><input type="checkbox" value="1203" wfd-id="id71">Phòng gia đình</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9">
+                        <div class="col-lg-6 col-md-6" style="padding-left: 0px;">
+                            <h1 class="cat-title">Khách sạn Hải Phòng</h1>
+                        </div>
+                        <div class="hotel-cat-box-list-data">
+                            <ul>
+                                <li>
+                                    <div class="box-img">  
+                                        <a target="_blank" href="https://www.vietnambooking.com/hotel/vietnam/melia-vinpearl-rivera-hai-phong.html?ds=10122024&amp;de=11122024&amp;r=1&amp;a=2&amp;c=0&amp;ca=&amp;q=1&amp;rs=5">
+                                            <img src="https://cdn2.vietnambooking.com/wp-content/uploads/hotel_pro/hotel_339845/8f26172ecee5f9c8fcf0448f85787eda.jpg" alt="Melia Vinpearl Rivera Hải Phòng">
+                                        </a> 
+                                    </div>
+                                    <div class="box-content">
+                                        <a target="_blank" href="https://www.vietnambooking.com/hotel/vietnam/melia-vinpearl-rivera-hai-phong.html?ds=10122024&amp;de=11122024&amp;r=1&amp;a=2&amp;c=0&amp;ca=&amp;q=1&amp;rs=5">
+                                            <div class="box-top">
+                                                <div class="box-type-star">
+                                                    <span class="box-type">Khách sạn</span>
+                                                    <span class="box-star">                        <i class="fas fa-star"></i>                        <i class="fas fa-star"></i>                        <i class="fas fa-star"></i>                        <i class="fas fa-star"></i>                        <i class="fas fa-star"></i></span>
+                                                </div>
+                                                <h3 class="title">Melia Vinpearl Rivera Hải Phòng</h3>
+                                                <h4 class="address">Đường Manhattan 9, khu đô thị Vinhomes Imperia, đường Hà Nội, Hồng Bàng, Thành phố Hải Phòng</h4>
+                                            </div>
+                                            
+                                            <div class="box-bottom">
+                                                <div class="box-services">
+                                                    <span><i class="fa-solid fa-wifi"></i></i> Wifi</span><span><i class="fa-solid fa-temperature-arrow-down"></i> Máy lạnh</span><span><i class="fa-solid fa-ban-smoking"></i> Phòng không hút thuốc</span>
+                                                    <span class="count">+44</span>
+                                                </div>
+                                                <div class="box-price">
+                                                    <div class="price text-right">
+                                                        <div class="price-common">Giá trung bình mỗi đêm</div>
+                                                        <div class="price-feature">2,799,000 VND</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-img">  
+                                        <a target="_blank" href="https://www.vietnambooking.com/hotel/vietnam/melia-vinpearl-rivera-hai-phong.html?ds=10122024&amp;de=11122024&amp;r=1&amp;a=2&amp;c=0&amp;ca=&amp;q=1&amp;rs=5">
+                                            <img src="https://cdn2.vietnambooking.com/wp-content/uploads/hotel_pro/hotel_339845/8f26172ecee5f9c8fcf0448f85787eda.jpg" alt="Melia Vinpearl Rivera Hải Phòng">
+                                        </a> 
+                                    </div>
+                                    <div class="box-content">
+                                        <a target="_blank" href="https://www.vietnambooking.com/hotel/vietnam/melia-vinpearl-rivera-hai-phong.html?ds=10122024&amp;de=11122024&amp;r=1&amp;a=2&amp;c=0&amp;ca=&amp;q=1&amp;rs=5">
+                                            <div class="box-top">
+                                                <div class="box-type-star">
+                                                    <span class="box-type">Khách sạn</span>
+                                                    <span class="box-star">                        <i class="fas fa-star"></i>                        <i class="fas fa-star"></i>                        <i class="fas fa-star"></i>                        <i class="fas fa-star"></i>                        <i class="fas fa-star"></i></span>
+                                                </div>
+                                                <h3 class="title">Melia Vinpearl Rivera Hải Phòng</h3>
+                                                <h4 class="address">Đường Manhattan 9, khu đô thị Vinhomes Imperia, đường Hà Nội, Hồng Bàng, Thành phố Hải Phòng</h4>
+                                            </div>
+                                            
+                                            <div class="box-bottom">
+                                                <div class="box-services">
+                                                    <span><i class="fa-solid fa-wifi"></i></i> Wifi</span><span><i class="fa-solid fa-temperature-arrow-down"></i> Máy lạnh</span><span><i class="fa-solid fa-ban-smoking"></i> Phòng không hút thuốc</span>
+                                                    <span class="count">+44</span>
+                                                </div>
+                                                <div class="box-price">
+                                                    <div class="price text-right">
+                                                        <div class="price-common">Giá trung bình mỗi đêm</div>
+                                                        <div class="price-feature">2,799,000 VND</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info-hotel">
+                            <h2 style="text-align: justify;">
+                                <strong>Thông tin về khách sạn tại Hải Phòng</strong>
+                            </h2>
+                            <table border="1" cellpadding="1" cellspacing="1" >
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Tổng khách sạn tại Hải Phòng
+                                        </td>
+                                        <td>
+                                            44 khách sạn
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Giá trung bình/đêm
+                                        </td>
+                                        <td>
+                                            650.000đ/đêm
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Khách sạn phổ biến tại Hải Phòng
+                                        </td>
+                                        <td>
+                                            Khách sạn Sheraton Hải Phòng
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Địa điểm du lịch
+                                        </td>
+                                        <td>
+                                            Đảo Cát Bà
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h2 style="text-align: justify;">
+                                <strong>Câu hỏi thường gặp về khách sạn tại Hải Phòng</strong>
+                            </h2>
+                            
+                            <p>
+                                <strong>1. Đâu là khách sạn tại Hải Phòng có hồ bơi dành cho du khách?</strong>
+                            </p>
+                            
+                            <p>
+                                Những khách sạn có hồ bơi tại Hải Phòng:&nbsp;Khách sạn Cảnh Hưng Palace Hải Phòng, Melia Vinpearl Rivera Hải Phòng, khách sạn Sheraton Hải Phòng, Du thuyền Heritage Bình Chuẩn Cát Bà, khách sạn Pearl River Hải Phòng, khách sạn Azumaya Hải Phòng.
+                            </p>
+                            
+                            <p>
+                                <strong>2. Đâu là khách sạn có miễn phí bữa ăn sáng tại Hải Phòng?</strong>
+                            </p>
+                            
+                            <p>
+                                Những khách sạn có miễn phí bữa ăn sáng tại Hải Phòng:&nbsp;Khách sạn Manoir Des Arts Hải Phòng, khách Sạn Sea Pearl Cát Bà, khách sạn Nikko Hải Phòng, khách sạn AVANI Hải Phòng Harbour View, khách sạn Imperial Boat Hải Phòng,&nbsp;Hòn Dấu Resort Hải Phòng.
+                            </p>
+                            
+                            <p>
+                                <strong>3. Đâu là khách&nbsp;sạn 5 sao tốt nhất tại Hải Phòng?</strong>
+                            </p>
+                            
+                            <p>
+                                Khách sạn 5 sao tại Hải Phòng tốt nhất:&nbsp;Melia Vinpearl Rivera Hải Phòng, khách sạn Sheraton Hải Phòng, khách sạn Nikko Hải Phòng, khách sạn Mercure Hải Phòng,&nbsp;Flamingo Cát Bà Beach Resort,&nbsp;Flamingo Lan Ha Bay Resort.
+                            </p>
+                            
+                            <p>
+                                <strong>4. Đâu là khách sạn được nhiều du khách đến nghỉ dưỡng tại Hải Phòng?</strong>
+                            </p>
+                            
+                            <p>
+                                Những khách sạn ở Hải Phòng&nbsp;được nhiều du khách đến nghỉ dưỡng:&nbsp;Flamingo Cát Bà Beach Resort,&nbsp;Wyndham Grand Flamingo Cát Bà Resort,&nbsp;Flamingo Lan Ha Bay Resort,&nbsp;Hòn Dấu Resort Hải Phòng.
+                            </p>
+                            
+                            <p>
+                                <strong>5. Khách sạn tại Hải Phòng có dịch vụ đưa đón sân bay cho du khách?</strong>
+                            </p>
+                            
+                            <p>
+                                Những khách sạn có dịch vụ đưa đón sân bay tại Hải Phòng:&nbsp;Khách Sạn Friend’s Hải Phòng, khách Sạn Sea Pearl Cát Bà, khách sạn Nikko Hải Phòng, khách sạn Imperial Boat Hải Phòng, khách sạn Mercure Hải Phòng, khách sạn Grand Hill Hải Phòng.
+                            </p>
+                            
+                            <p>
+                                <strong>6. Đâu là khách sạn có dịch vụ Spa tại Hải Phòng cho du khách thư giãn?</strong>
+                            </p>
+                            
+                            <p>
+                                Những khách sạn có dịch vụ Spa tại Hải Phòng:&nbsp;Khách sạn Cảnh Hưng Palace Hải Phòng,&nbsp;Melia Vinpearl Rivera Hải Phòng, khách sạn Sheraton Hải Phòng, khách Sạn Sea Pearl Cát Bà, khách sạn Nikko Hải Phòng.
+                            </p>
+                            
+                            <p>
+                                <strong>7. Đâu là khách sạn gần Cát Bà tại Hải Phòng?</strong>
+                            </p>
+                            
+                            <p>
+                                Những khách sạn gần Cát Bà:&nbsp;Monkey Island Resort Cát Bà Hải Phòng,&nbsp;Wyndham Grand Flamingo Cát Bà Resort,&nbsp;Hôtel Perle d’Orient Cat Ba – MGallery Hải Phòng.
+                            </p>
+                            
+                            <p>
+                                <strong>8. Giá phòng trung bình một đêm tại Hải Phòng bao nhiêu?</strong>
+                            </p>
+                            
+                            <p>
+                                Phòng khách sạn tại Hải Phòng có giá trung bình 550.000đ/đêm và giá có thể cao hơn tùy vào chất lượng dịch vụ của khách sạn.
+                            </p>
+                            
+                            <p>
+                                <strong>9. Khách sạn nào tại Hải Phòng&nbsp;có phòng cho gia đình dành cho du khách?</strong>
+                            </p>
+                            
+                            <p>
+                                Những khách sạn có phòng gia đình cho du khách:&nbsp;Khách Sạn Sea Pearl Cát Bà,&nbsp;Hòn Dấu Resort Hải Phòng, khách sạn Mercure Hải Phòng,&nbsp;Flamingo Cát Bà Beach Resort,&nbsp;PH Hotel &amp; Apartment Hà Nội.
+                            </p>
+                            
+                            <p>
+                                <strong>10. Đâu là khách sạn được nhiều người yêu thích tại Hải Phòng?</strong>
+                            </p>
+                            
+                            <p>
+                                Khách sạn được nhiều du khách yêu thích tại Hải Phòng:&nbsp;Khách sạn Cảnh Hưng Palace Hải Phòng,&nbsp;Melia Vinpearl Rivera Hải Phòng, khách sạn Sheraton Hải Phòng, khách sạn Nikko Hải Phòng.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer class="border-top">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                <div class="col col-lg-6 mb-4">
+                    <div>
+                        <div class="title-contact-us">Liên hệ với chúng tôi <span>(Hỗ trợ 24/7)</span>
+                        </div>
+                        <ul class="footer-ul-hotline">
+                            <li> <svg class="svg-inline--fa fa-phone-flip" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-flip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"></path></svg><!-- <i class="fas fa-phone-alt"></i> Font Awesome fontawesome.com --> Đặt vé máy bay: <a href="tel:19004798">1900 4798 </a></li>
+    
+                            <li> <svg class="svg-inline--fa fa-phone-flip" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-flip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"></path></svg><!-- <i class="fas fa-phone-alt"></i> Font Awesome fontawesome.com --> Đặt Tour du lịch: <a href="tel:19003398">1900 3398 </a></li>
+    
+                            <li> <svg class="svg-inline--fa fa-phone-flip" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-flip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"></path></svg><!-- <i class="fas fa-phone-alt"></i> Font Awesome fontawesome.com --> Đặt phòng khách sạn: <a href="tel:19004698">1900 4698 </a></li>
+    
+                            <li> <svg class="svg-inline--fa fa-phone-flip" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-flip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"></path></svg><!-- <i class="fas fa-phone-alt"></i> Font Awesome fontawesome.com --> Tư vấn xin Visa: <a href="tel:19003498">1900 3498 </a></li>
+                            <li>
+                                <div>Tổng đài hỗ trợ gọi từ nước ngoài về Việt Nam</div>
+                                <img class="flag" src="/assets/images/vietnam.svg" alt="flag vn"> <a href="tel:02873036167"> +8428 7303 6167 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col col-lg-2 mb-3 d-none d-lg-block">
+                    <h5>Về chúng tôi</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+            
+                <div class="col col-lg-2 mb-3 d-none d-lg-block">
+                    <h5>Sản phẩm</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+            
+                <div class="col col-lg-2 mb-3 d-none d-lg-block">
+                    <h5>Khác</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                <div class="col col-lg-6 mb-4">
+                    <div>
+                        <div class="footer-box-logo">
+                            <a href="https://www.vietnambooking.com">
+                                <img class="lazy" src="https://data.vietnambooking.com/common/svg/logo_white.svg" alt="vietnam booking" style="display: inline-block;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col col-lg-6  mb-3 d-none d-lg-block">
+                    <div class="footer-box-address-official">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><span><i class="fa fa-map-marker-alt"></i> HỒ CHÍ
+                                            MINH</span></td>
+                                    <td><i class="fas fa-circle"></i> 164 Lê Thánh Tôn, Bến
+                                        Th�&nbsp;nh, Quận 1</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><i class="fas fa-circle"></i> 190-192 Trần Quý, Phường 6,
+                                        Quận 11</td>
+                                </tr>
+                                <tr>
+                                    <td><span><i class="fa fa-map-marker-alt"></i> HÀ NỘI</span>
+                                    </td>
+                                    <td><i class="fas fa-circle"></i> 11B Nguyễn Siêu, H�&nbsp;ng
+                                        Buồm, Ho�&nbsp;n Kiếm</td>
+                                </tr>
+                                <tr>
+                                    <td><span><i class="fa fa-map-marker-alt"></i> ĐÀ NẴNG</span>
+                                    </td>
+                                    <td><i class="fas fa-circle"></i> 12 Phạm Phú Thứ, Hải Châu 1,
+                                        Hải Châu</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                <div class="col col-lg-6 mb-4">
+                    <div>
+                        <ul class="ul-list-app d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                            <li>
+                                <span class="title-box">
+                                    <h4>Tải app Vietnam Booking</h4>
+                                </span>
+                            </li>
+                                            
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.vietnambooking.android">
+                                    <img src="/assets/images/icon_playstore.png" alt="app android">
+                                </a></li>                
+                                <li>
+                                    <a href="https://apps.apple.com/vn/app/id1523773424">
+                                    <img src="/assets/images/icon_appstore.png" alt="app ios">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col col-lg-6 mb-3 d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                    <div class="footer-social-footer d-flex align-items-center">
+                        <a target="_blank" rel="nofollow" href="https://www.facebook.com/VietnamBookingCorp"><img src="/assets/images/icon_facebook_white.png" alt="Facebook"></a>
+                        <a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCYWE2IgZ9q05Kn8EfUCZbBQ"><img src="/assets/images/icon_youtube_white.png" alt="youtube"></a>
+                        <a target="_blank" rel="nofollow" href="https://www.instagram.com/vietnambookingcorp/"><img src="/assets/images/icon_instagram_white.png" alt="Instagram"></a>
+                    </div>
+                    <div class="footer-box-registered-ecommerce">
+                        <a target="_blank" rel="nofollow" href="http://online.gov.vn/Home/WebDetails/21679">
+                            <img src="/assets/images/icon_bo_cong_thuong.png" alt="ios"></a>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/list_swiper.js"></script>
+</body>
+
+</html>

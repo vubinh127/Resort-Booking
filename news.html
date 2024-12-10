@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" scr="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+    <header class="header-box-full-top scroll-active">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="header-box-logo">
+                    <a class="navbar-brand" href="#">
+                        <img src="/assets/images/logo_nosub.svg" alt="VIETNAM BOOKING" />
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vé máy bay</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Du lịch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Khách sạn</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Visa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Combo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="block_banner">
+            <div class="swiper banner_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image_banner">
+                            <img src="/assets/images/Vietnam-Booking-canh-bao-doi-tuong-mao-danh-lua-dao.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image_banner">
+                            <img src="/assets/images/bay-011024.jpg" alt="" />
+                        </div>
+                    </div><div class="swiper-slide">
+                        <div class="image_banner">
+                            <img src="/assets/images/banner1-halong.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-box-form-search type-cat type-default">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="hotel-box-form-search-mid hotel-box-form-search-inner" style="display: block">
+                            <div class="box-title type-title-form">
+                                <img src="/assets/images/icon_hotel.png" alt="icon hotel" />
+                                <h1>Đặt phòng khách sạn trực tuyến giá rẻ</h1>
+                            </div>
+                            <div class="hotel-box-form-search-inner type-default">
+                                <div class="hotel-box-name box-input-item">
+                                    <label class="">Địa điểm hoặc tên Khách sạn</label>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <input value="" placeholder="Nhập địa điểm hoặc tên khách sạn"
+                                        class="hotel-name form-control" type="text" />
+                                </div>
+
+                                <div class="input-daterange">
+                                    <div class="hotel-box-date-start box-input-item">
+                                        <label class="">Ngày nhận phòng</label>
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <input value="" required="" placeholder="Ngày nhận phòng"
+                                            class="hotel-date-start form-control" type="text" />
+                                    </div>
+                                    <div class="hotel-box-date-end box-input-item">
+                                        <label class="">Ngày trả phòng</label>
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <input value="" required="" placeholder="Ngày trả phòng"
+                                            class="hotel-date-end form-control" type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="hotel-box-passenger box-input-item">
+                                    <label class="">Số phòng và khách</label>
+                                    <i class="fa-solid fa-user"></i>
+                                    <input readonly="" value="1 phòng, 1 khách" placeholder="Số phòng và khách"
+                                        class="hotel-info-passenger form-control" type="text" />
+
+                                    <div class="dropdown-menu" aria-labelledby="dLabel">
+                                        <div class="box-dropdown-content">
+                                            <div class="box-item">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="title">Phòng</span>
+                                                            </td>
+                                                            <td class="td-box-action">
+                                                                <div>
+                                                                    <span data-name="room" data-type="minus"
+                                                                        class="type-minus type-room type-button">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div>
+                                                                    <span data-min="1" data-max="10"
+                                                                        class="type-room type-show">1</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span data-name="room"
+                                                                        class="type-plus type-room type-button"
+                                                                        data-type="plus">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <span class="title">Người lớn</span>
+                                                            </td>
+                                                            <td class="td-box-action">
+                                                                <div>
+                                                                    <span data-name="adult" data-type="minus"
+                                                                        class="type-minus type-adult type-button">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div>
+                                                                    <span data-min="1" data-max="10"
+                                                                        class="type-adult type-show">1</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span data-name="adult" data-type="plus"
+                                                                        class="type-plus type-adult type-button">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <span class="title">Trẻ em</span>
+                                                            </td>
+                                                            <td class="td-box-action">
+                                                                <div>
+                                                                    <span data-name="child" data-type="minus"
+                                                                        class="type-minus type-child type-button disabled">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div>
+                                                                    <span data-min="0" data-max="9"
+                                                                        class="type-child type-show">0</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span data-name="child" data-type="plus"
+                                                                        class="type-plus type-child type-button">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-box-submit"><button class="hotel-btn-submit hotel-btn-submit-form-data"
+                                    type="button">Tìm kiếm</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-box-slider-default-inner">
+            <div class="container">
+                <h2>Tin tức khách sạn nổi bật</h2>
+                <div class="list_news position-relative">
+                    <div class="list_news_slide swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="box-img">
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">
+                                        <img alt="Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh" src="https://www.vietnambooking.com/wp-content/uploads/2024/08/lang-chu-tich-ho-chi-minh-1-300x200.jpg">                                               </a>
+                                    </div>
+                                    <div class="box-content-default">
+                                        <div class="box-title-content">
+                                            <h3 class="title-h3"><a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh</a></h3>
+                                        </div>
+                                        <div class="box-summary-content">
+                                            Lăng chủ Tịch Hồ Chí Minh là công trình mang ý nghĩa to lớn, biểu tượng văn hóa, lịch sử giữa lòng Thủ đô. Bài viết hôm nay, Vietnam Booking sẽ giúp bạn hiểu rõ hơn về Lăng Bác, cùng nhiều trải nghiệm ...                                                </div>
+
+                                        <a class="a-links-details" href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Xem chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i> </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="box-img">
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">
+                                        <img alt="Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh" src="https://www.vietnambooking.com/wp-content/uploads/2024/08/lang-chu-tich-ho-chi-minh-1-300x200.jpg">                                               </a>
+                                    </div>
+                                    <div class="box-content-default">
+                                        <div class="box-title-content">
+                                            <h3 class="title-h3"><a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh</a></h3>
+                                        </div>
+                                        <div class="box-summary-content">
+                                            Lăng chủ Tịch Hồ Chí Minh là công trình mang ý nghĩa to lớn, biểu tượng văn hóa, lịch sử giữa lòng Thủ đô. Bài viết hôm nay, Vietnam Booking sẽ giúp bạn hiểu rõ hơn về Lăng Bác, cùng nhiều trải nghiệm ...                                                </div>
+
+                                        <a class="a-links-details" href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Xem chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i> </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="box-img">
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">
+                                        <img alt="Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh" src="https://www.vietnambooking.com/wp-content/uploads/2024/08/lang-chu-tich-ho-chi-minh-1-300x200.jpg">                                               </a>
+                                    </div>
+                                    <div class="box-content-default">
+                                        <div class="box-title-content">
+                                            <h3 class="title-h3"><a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh</a></h3>
+                                        </div>
+                                        <div class="box-summary-content">
+                                            Lăng chủ Tịch Hồ Chí Minh là công trình mang ý nghĩa to lớn, biểu tượng văn hóa, lịch sử giữa lòng Thủ đô. Bài viết hôm nay, Vietnam Booking sẽ giúp bạn hiểu rõ hơn về Lăng Bác, cùng nhiều trải nghiệm ...                                                </div>
+
+                                        <a class="a-links-details" href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Xem chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i> </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="box-img">
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">
+                                        <img alt="Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh" src="https://www.vietnambooking.com/wp-content/uploads/2024/08/lang-chu-tich-ho-chi-minh-1-300x200.jpg">                                               </a>
+                                    </div>
+                                    <div class="box-content-default">
+                                        <div class="box-title-content">
+                                            <h3 class="title-h3"><a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh</a></h3>
+                                        </div>
+                                        <div class="box-summary-content">
+                                            Lăng chủ Tịch Hồ Chí Minh là công trình mang ý nghĩa to lớn, biểu tượng văn hóa, lịch sử giữa lòng Thủ đô. Bài viết hôm nay, Vietnam Booking sẽ giúp bạn hiểu rõ hơn về Lăng Bác, cùng nhiều trải nghiệm ...                                                </div>
+
+                                        <a class="a-links-details" href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Xem chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i> </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-box-news-sidebar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <div class="category-box-list-default-inner">
+                            <h2>Tin tức khách sạn</h2>
+                            <ul>
+                                <li>
+                                    <h3>
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">Tất tần
+                                            tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh</a>
+                                    </h3>
+                                    <div class="box-img">
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html">
+                                            <img class="" alt="Tất tần tật về kinh nghiệm tham quan Lăng chủ Tịch Hồ Chí Minh"
+                                                src="https://www.vietnambooking.com/wp-content/uploads/2024/08/lang-chu-tich-ho-chi-minh-1-300x200.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="box-content">
+                                        <div class="box-description">
+                                            Lăng chủ Tịch Hồ Chí Minh là công trình mang ý nghĩa to lớn, biểu tượng văn hóa, lịch sử giữa lòng Thủ
+                                            đô. Bài viết hôm nay, Vietnam Booking sẽ giúp bạn hiểu rõ hơn về Lăng Bác, cùng nhiều trải nghiệm ...
+                                        </div>
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/lang-chu-tich-ho-chi-minh.html" class="a-readmore">xem chi tiết</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <h3>
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/khach-san-co-netflix-and-chill-ho-chi-minh.html">Top
+                                            10 khách sạn có Netflix and Chill tại Hồ Chí Minh giá rẻ
+                                        </a>
+                                    </h3>
+                                    <div class="box-img">
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/khach-san-co-netflix-and-chill-ho-chi-minh.html">
+                                            <img class="" alt="Top 10 khách sạn có Netflix and Chill tại Hồ Chí Minh giá rẻ"
+                                                src="https://www.vietnambooking.com/wp-content/uploads/2024/08/khach-san-co-netflix-and-chill-ho-chi-minh-7-1-300x200.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="box-content">
+                                        <div class="box-description">
+                                            Khách sạn có Netflix and Chill Hồ Chí Minh là concept hẹn hò kín đáo được nhiều bạn trẻ yêu thích hiện
+                                            nay. Đến đây, các cặp đôi sẽ được thoải mái trong không gian riêng tư và được ... 
+                                        </div>
+                                        <a href="https://www.vietnambooking.com/khach-san/tin-tuc-khach-san/khach-san-co-netflix-and-chill-ho-chi-minh.html"class="a-readmore">xem chi tiết</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="pagination mt-2">
+                                <li>
+                                  <a href="#">Prev</a>
+                                </li>
+                                <li>
+                                  <a href="#">1</a>
+                                </li>
+                                <li class="active">
+                                  <a href="#">2</a>
+                                </li>
+                                <li>
+                                  <a href="#">3</a>
+                                </li>
+                                <li>
+                                  <a href="#">4</a>
+                                </li>
+                                <li>
+                                  <a href="#">5</a>
+                                </li>
+                                <li>
+                                  <a href="#">Next</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="sidebar-box-item">
+                            <h3>TỔNG ĐÀI TƯ VẤN</h3>
+                            <div class="sidebar-box-content sidebar-hotline">
+                                <label>Mọi thắc mắc của Quý khách</label>
+                                vui lòng gọi:<a href="tel:19004698">1900 4698</a>
+                                <span class="span-note">Chúng tôi hỗ trợ 24/7</span>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-box-item">
+                            <h3>TẠI SAO CHỌN CHÚNG TÔI</h3>
+                            <div class="sidebar-box-content sidebar-choose-us">
+                                <table class="table">
+                                    <tbody><tr>
+                                        <td><img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_global_search.png" alt="global search"></td>
+                                        <td>
+                                            <label>Dễ dàng tìm kiếm chuyến bay</label>
+                                            Trên 100 hãng hàng không
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_city.png" alt="city"></td>
+                                        <td>
+                                            <label>Đại lý vé máy bay chính thức</label>
+                                            Giá rẻ bất ngờ
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_laptop.png" alt="laptop"></td>
+                                        <td>
+                                            <label>Đặt vé online</label>
+                                            Xác nhận nhanh chóng
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_atm.png" alt="atm"></td>
+                                        <td>
+                                            <label>Thanh toán an toàn</label>
+                                            Tiện lợi và tin cậy
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_ticket.png" alt="ticket "></td>
+                                        <td>
+                                            <label>Giao vé miễn phí</label>
+                                            Tại nhà trong nội thành
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_contact.png" alt="contact"></td>
+                                        <td>
+                                            <label>Tư vấn</label>
+                                            Đường bay và giá tốt nhất
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-box-item">
+                            <h3>HÌNH THỨC THANH TOÁN</h3>
+                            <div class="sidebar-box-content sidebar-payment">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                      <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_home.png" alt="payment home"> Thanh toán tại nhà
+                                          </button>
+                                        </h2>
+                                      </div>
+                                  
+                                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Vietnam Booking  sẽ hỗ trợ giao vé miễn phí và thanh toán tại nhà cho những Quý khách hàng nào ở trong nội thành Hà Nội, Đà Nẵng Và TP. Hồ Chí Minh.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card">
+                                      <div class="card-header" id="headingTwo">
+                                        <h2 class="mb-0">
+                                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_city.png" alt="payment office"> Tại văn phòng chúng tôi
+                                          </button>
+                                        </h2>
+                                      </div>
+                                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p>Hồ Chí Minh</p>
+                                            <p> - 164 Lê Thánh Tôn, Bến Thành, Q. 1</p>
+                                            <p> - 190 Trần Quý, Phường 6, Q. 11</p>
+                                            <p> - 192 Trần Quý, Phường 6, Q. 11</p>
+                                            <p>Hà Nội</p>
+                                            <p> - 30 Phan Chu Trinh, , Q. Hoàn Kiếm</p>
+                                            <p>Đà Nẵng</p>
+                                            <p> - 12 Phạm Phú Thứ, , Q. Hải Châu </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card">
+                                      <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_bank.png" alt="payment bank"> Chuyển khoản ngân hàng
+                                          </button>
+                                        </h2>
+                                      </div>
+                                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="bank_list">
+                                                <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_list_bank.jpg" alt="list bank">
+
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer class="border-top">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                <div class="col col-lg-6 mb-4">
+                    <div>
+                        <div class="title-contact-us">Liên hệ với chúng tôi <span>(Hỗ trợ 24/7)</span>
+                        </div>
+                        <ul class="footer-ul-hotline">
+                            <li> <svg class="svg-inline--fa fa-phone-flip" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-flip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"></path></svg><!-- <i class="fas fa-phone-alt"></i> Font Awesome fontawesome.com --> Đặt vé máy bay: <a href="tel:19004798">1900 4798 </a></li>
+    
+                            <li> <svg class="svg-inline--fa fa-phone-flip" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-flip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"></path></svg><!-- <i class="fas fa-phone-alt"></i> Font Awesome fontawesome.com --> Đặt Tour du lịch: <a href="tel:19003398">1900 3398 </a></li>
+    
+                            <li> <svg class="svg-inline--fa fa-phone-flip" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-flip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"></path></svg><!-- <i class="fas fa-phone-alt"></i> Font Awesome fontawesome.com --> Đặt phòng khách sạn: <a href="tel:19004698">1900 4698 </a></li>
+    
+                            <li> <svg class="svg-inline--fa fa-phone-flip" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-flip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"></path></svg><!-- <i class="fas fa-phone-alt"></i> Font Awesome fontawesome.com --> Tư vấn xin Visa: <a href="tel:19003498">1900 3498 </a></li>
+                            <li>
+                                <div>Tổng đài hỗ trợ gọi từ nước ngoài về Việt Nam</div>
+                                <img class="flag" src="/assets/images/vietnam.svg" alt="flag vn"> <a href="tel:02873036167"> +8428 7303 6167 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col col-lg-2 mb-3 d-none d-lg-block">
+                    <h5>Về chúng tôi</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+            
+                <div class="col col-lg-2 mb-3 d-none d-lg-block">
+                    <h5>Sản phẩm</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+            
+                <div class="col col-lg-2 mb-3 d-none d-lg-block">
+                    <h5>Khác</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                <div class="col col-lg-6 mb-4">
+                    <div>
+                        <div class="footer-box-logo">
+                            <a href="https://www.vietnambooking.com">
+                                <img class="lazy" src="https://data.vietnambooking.com/common/svg/logo_white.svg" alt="vietnam booking" style="display: inline-block;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col col-lg-6  mb-3 d-none d-lg-block">
+                    <div class="footer-box-address-official">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><span><i class="fa fa-map-marker-alt"></i> HỒ CHÍ
+                                            MINH</span></td>
+                                    <td><i class="fas fa-circle"></i> 164 Lê Thánh Tôn, Bến
+                                        Th�&nbsp;nh, Quận 1</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><i class="fas fa-circle"></i> 190-192 Trần Quý, Phường 6,
+                                        Quận 11</td>
+                                </tr>
+                                <tr>
+                                    <td><span><i class="fa fa-map-marker-alt"></i> HÀ NỘI</span>
+                                    </td>
+                                    <td><i class="fas fa-circle"></i> 11B Nguyễn Siêu, H�&nbsp;ng
+                                        Buồm, Ho�&nbsp;n Kiếm</td>
+                                </tr>
+                                <tr>
+                                    <td><span><i class="fa fa-map-marker-alt"></i> ĐÀ NẴNG</span>
+                                    </td>
+                                    <td><i class="fas fa-circle"></i> 12 Phạm Phú Thứ, Hải Châu 1,
+                                        Hải Châu</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                <div class="col col-lg-6 mb-4">
+                    <div>
+                        <ul class="ul-list-app d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                            <li>
+                                <span class="title-box">
+                                    <h4>Tải app Vietnam Booking</h4>
+                                </span>
+                            </li>
+                                            
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.vietnambooking.android">
+                                    <img src="/assets/images/icon_playstore.png" alt="app android">
+                                </a></li>                
+                                <li>
+                                    <a href="https://apps.apple.com/vn/app/id1523773424">
+                                    <img src="/assets/images/icon_appstore.png" alt="app ios">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col col-lg-6 mb-3 d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                    <div class="footer-social-footer d-flex align-items-center">
+                        <a target="_blank" rel="nofollow" href="https://www.facebook.com/VietnamBookingCorp"><img src="/assets/images/icon_facebook_white.png" alt="Facebook"></a>
+                        <a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCYWE2IgZ9q05Kn8EfUCZbBQ"><img src="/assets/images/icon_youtube_white.png" alt="youtube"></a>
+                        <a target="_blank" rel="nofollow" href="https://www.instagram.com/vietnambookingcorp/"><img src="/assets/images/icon_instagram_white.png" alt="Instagram"></a>
+                    </div>
+                    <div class="footer-box-registered-ecommerce">
+                        <a target="_blank" rel="nofollow" href="http://online.gov.vn/Home/WebDetails/21679">
+                            <img src="/assets/images/icon_bo_cong_thuong.png" alt="ios"></a>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/list_swiper.js"></script>
+</body>
+
+</html>

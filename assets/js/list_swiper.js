@@ -73,3 +73,19 @@ var swiperSameHotel = new Swiper(".same_hotel_slide", {
         }
     }
 });
+
+
+var swiperSameHotel = new Swiper(".list_news_slide", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+        992: {
+            slidesPerView: 3,
+           
+        }
+    },
+    navigation: {
+        nextEl: '.list_news .swiper-button-next',
+        prevEl: '.list_news .swiper-button-prev',
+    },
+});

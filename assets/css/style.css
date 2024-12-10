@@ -42,6 +42,35 @@ img {
     object-fit: cover;
 }
 
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    color: #ffffff;
+    background-color: #1759d9;
+    opacity: 1;
+}
+
+.swiper-button-prev {
+    z-index: 15;
+    left: -1.5rem;
+    right: auto;
+}
+
+.swiper-button-next{
+    z-index: 15;
+    left: auto;
+    right: -1.5rem;
+}
+
+.swiper-button-next:after ,
+.swiper-button-prev:after  {
+    font-size: 18px;
+}
+
+
 .navbar-light .navbar-toggler {
 border: 1xp solid #fff;
 }
@@ -685,6 +714,8 @@ ul.ul-list-app li {
 .detail_hotel_page .hotel-box-form-search.type-cat.type-default .hotel-box-form-search-inner .box-input-item > svg {
     top: 50%;
     transform: translateY(-50%);
+    width: 14px;
+    height: auto;
 }
 
 .detail_hotel_page .hotel-box-form-search.type-cat.type-default .hotel-box-form-search-inner  {
@@ -1503,6 +1534,527 @@ ul.ul-list-app li {
     font-weight: 700;
 }
 
+.category-box-slider-default-inner .item {
+    overflow: hidden;
+}
+
+.category-box-slider-default-inner h2 {
+    font-size: 36px;
+    color: #000;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.category-box-slider-default-inner .box-img {
+    overflow: hidden;
+    height: 200px;
+}
+
+.category-box-slider-default-inner .box-content-default {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 14px #f5f4f4;
+    margin-bottom: 20px;
+}
+.category-box-slider-default-inner .box-title-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0;
+    top: 0;
+    min-height: 40px;
+    font-weight: 700;
+}
+
+.category-box-slider-default-inner .box-title-content h3 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.category-box-slider-default-inner .box-summary-content {
+    font-size: 14px;
+    color: #58616b;
+    min-height: 140px;
+    text-align: left;
+}
+
+.category-box-slider-default-inner .a-links-details {
+    font-size: 13px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+.category-box-slider-default-inner .a-links-details i {
+    color: #448aff;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.category-box-news-sidebar h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #0066d9;
+    
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.category-box-news-sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.category-box-news-sidebar ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.category-box-news-sidebar ul li h3 {
+    
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.category-box-news-sidebar ul li h3 a {
+    color: #434549;
+    font-size: 23px;
+}
+
+.category-box-news-sidebar ul li .box-img {
+    width: 215px;
+    height: 140px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.category-box-news-sidebar ul li .box-img img {
+    width: 100%;
+}
+
+.category-box-news-sidebar ul li .box-content {
+    width: 380px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    min-height: 140px;
+}
+
+.category-box-news-sidebar ul li .box-content .box-description {
+    font-size: 15px;
+    color: #3b434b;
+    
+}
+
+.category-box-news-sidebar ul li .box-content .a-readmore {
+    border: 1px solid #0066d9;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: #0066d9;
+    
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sidebar-box-item h3 {
+    font-size: 18px;
+    background: #0066d9;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar-box-content {
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+    color: #565656;
+    margin-bottom: 20px;
+}
+
+.sidebar-box-item label {
+    color: #1e2325;
+    font-weight: 700;
+    font-weight: 400;
+    font-size: 15px;
+    display: block;
+}
+
+.sidebar-box-content.sidebar-hotline a {
+    font-size: 22px;
+    color: #0066d9;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sidebar-box-content.sidebar-hotline .span-note {
+    display: block;
+    margin-top: 10px;
+}
+
+.sidebar-box-content table {
+    margin-bottom: 0;
+}
+
+.sidebar-box-content table tr:first-child td {
+    border-top: 0;
+}
+
+.sidebar-box-content img {
+    max-width: 100%;
+    width: 27px;
+    height: auto;
+}
+
+.sidebar-box-content .accordion button {
+    color: #1e2325;
+    font-size: 15px;
+    font-family: 'r_regular';
+    display: block;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-box-content .accordion button img {
+    height: 24px;
+    margin-right: 5px;
+}
+
+.bank_list img {
+    width: 100%;
+}
+
+.category-box-news-sidebar .pagination {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    border-radius: 2px;
+}
+
+.category-box-news-sidebar .pagination li {
+    list-style-type: none;
+    display: inline-block;
+    background: #0066d9;
+
+}
+.category-box-news-sidebar .pagination li a {
+    position: relative;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+.category-box-news-sidebar .pagination li a:hover,
+.category-box-news-sidebar .pagination li.active a {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.single-box-content-inner P {
+    letter-spacing: .3px;
+    font-size: 16px;
+    text-shadow: none;
+}
+
+.hotel-cat-column-filter .box-list-item {
+    border: solid 1px #e6e6e6;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hotel-cat-column-filter .box-item {
+    background: #fff;
+    padding: 15px 20px;
+}
+
+.hotel-cat-column-filter .box-item h3 {
+    margin: 0;
+    color: #15284a;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hotel-cat-column-filter .box-item .content {
+    min-height: 50px;
+}
+
+.hotel-cat-column-filter .box-item .content label svg path {
+    fill: #00b874;
+}
+
+.hotel-cat-column-filter .box-item .content label {
+    cursor: pointer;
+    font-size: 14px;
+    color: #191919;
+    font-family: 'r_regular';
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.hotel-cat-column-filter .box-item .content input[type='checkbox'] {
+    position: relative;
+    cursor: pointer;
+}
+
+.hotel-cat-column-filter .box-item .content input {
+    margin-right: 10px;
+}
+
+.hotel-cat-column-filter .box-item .content input[type='checkbox']:checked:before {
+    background: #1cc486;
+    outline: 0;
+    border: solid #1cc486;
+}
+
+.hotel-cat-column-filter .box-item .content input[type='checkbox']:checked:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    left: 7px;
+}
+
+.hotel-cat-column-filter .box-item .content input[type='checkbox']:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -3px;
+    left: 0;
+    border: 2px solid #a9a9a9;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.hotel-cat-column-filter .hotel-cat-product.slider-box-show-price {
+    color: #191919;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#hotel-cat-slider-range input{
+    height: 32px;
+    width: 100%;
+    overflow: hidden;
+    background: #fff0;
+    border: 0;
+}
+
+#hotel-cat-slider-range .ui-slider-handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hotel-cat-slider-range .ui-slider-range {
+    background-color: #007bff;
+}
+
+#hotel-cat-slider-range .slider-box-show-price {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hotel-cat-box-list-data ul {
+    padding: 0;
+} 
+
+.hotel-cat-box-list-data ul li {
+    list-style: none;
+    display: block;
+    display: grid;
+    grid-template-columns: 200px auto;
+    background: #fff;
+    margin-bottom: 20px;
+    border: solid 1px #e6e6e6;
+    border-radius: 5px;
+    position: relative;
+}
+
+.hotel-cat-box-list-data ul li .box-img {
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.hotel-cat-box-list-data ul li .box-img {
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.hotel-cat-box-list-data ul li .box-img img {
+    transition-duration: 2s;
+    height: 200px;
+}
+
+.hotel-cat-box-list-data ul li .box-content {
+    position: relative;
+}
+
+.hotel-cat-box-list-data ul li .box-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-top {
+    padding: 0 20px;
+    padding-top: 20px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    min-height: 70px;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-top .box-type-star {
+    font-weight: 700;
+    color: #191919;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-top .box-type-star .box-star {
+    font-size: 18px;
+    color: #f6d738;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-top h3.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #15284a;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-top h4.address {
+    font-size: 13px;
+    color: #9aa2b2;
+    text-decoration: underline;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom {
+    display: grid
+;
+    grid-template-columns: auto auto;
+    min-height: 50px;
+    margin-top: -5px;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .box-services {
+    color: #0da47e;
+    font-size: 13px;
+    line-height: 25px;
+    padding-left: 20px;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .box-services span {
+    padding: 5px;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .box-services i {
+    color: #15284a;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+ h1.cat-title {
+    margin: 10px 0;
+    padding: 0;
+    color: #086dea;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    padding-top: 15px;
+}
+
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .box-services span.count {
+    background: #9aa2b2;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2px 5px;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .box-price {
+    height: 85px;
+    position: relative;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .box-price .price.text-right {
+    padding-right: 15px;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .price-common {
+    color: #9aa2b2;
+    font-size: 12px;
+    margin: 10px 0;
+    margin-bottom: 0;
+}
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .price-feature {
+    font-size: 20px;
+    color: #ff9000;
+    font-weight: 700;
+}
+
+
+.hotel-cat-box-list-data ul li .box-content .box-bottom .box-services svg path {
+    fill: #15284a;
+}
+
+.info-hotel h2{
+    font-size: 20px;
+    color: #0066d9;
+    margin: 10px 0;
+}
+
+.info-hotel table {
+    font-family: 'r_regular';
+    margin: auto;
+    margin-bottom: 50px;
+}
 
 @media screen and (max-width: 992px) {
 
@@ -1553,5 +2105,23 @@ ul.ul-list-app li {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .category-box-news-sidebar ul li .box-img {
+        width: 100%;
+        margin: auto;
+    }
+
+    .category-box-news-sidebar ul li .box-content {
+        width: 100%;
+    }
+
+    .list_news .swiper-button-next,
+    .list_news .swiper-button-prev {
+        display: none;
+    }
+
+    .hotel-cat-box-list-data ul li {
+        grid-template-columns: auto;
     }
 }

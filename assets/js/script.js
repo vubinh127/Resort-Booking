@@ -36,6 +36,25 @@ $(document).ready(function() {
     $(document).click(function() {  
         $('.box-input-item').removeClass('open');   
     });  
+
+
+    const minPrice = 0;
+    const maxPrice = 6348000;
+
+    $("#hotel-cat-slider-range").slider({
+        range: true,
+        min: minPrice,
+        max: maxPrice,
+        values: [0, maxPrice], 
+        slide: function (event, ui) {
+            $(".slider-box-show-price .from").text(ui.values[0].toLocaleString());
+            $(".slider-box-show-price .to").text(ui.values[1].toLocaleString());
+        }
+    });
+
+    $(".slider-box-show-price .from").text($("#hotel-cat-slider-range").slider("values", 0).toLocaleString());
+    $(".slider-box-show-price .to").text($("#hotel-cat-slider-range").slider("values", 1).toLocaleString());
+
 });  
 
 
