@@ -71,6 +71,105 @@ img {
 }
 
 
+main {
+    position: relative;
+}
+
+main .social_box {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+main .social_box  .icon-box {
+    position: relative;
+    margin: 5px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .social_box .icon-link {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+main .social_box  .icon-background {
+    display: flex;
+    align-items: center;
+    background-color: #F6F9FF;
+    padding: 12px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, width 0.3s ease;
+    width: 56px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+main .social_box  .icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+main .social_box  .icon-box .hover-content {
+    color: #002499;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+
+main .social_box .icon-box:hover .icon-background {
+    width: auto;
+    transform: translateX(0px);
+}
+
+main .social_box .icon-box:hover .hover-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease 0.1s;
+}
+
+.back_to_top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.talk_btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid #003ea4;
+    background: #003ea4;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+}
+
+.talk_btn svg {
+    width: 40px;
+    height: 40px;
+}
+
+.talk_btn svg path {
+    fill: #fff;
+}
+
 .navbar-light .navbar-toggler {
 border: 1xp solid #fff;
 }
@@ -97,6 +196,19 @@ border: 1xp solid #fff;
 
 .header-box-full-top.scroll-active .header-box-logo {
     margin-top: 4px;
+}
+
+.header-box-full-top.scroll-active .hotine_box a {
+    color: #fedb41;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 16px;
+}
+
+.header-box-full-top.scroll-active .hotine_box img {
+    width: 24px;
+    height: 24px;
 }
 
 .header-box-full-top.scroll-active .header-box-logo {
@@ -744,10 +856,6 @@ ul.ul-list-app li {
 .detail_hotel_page .box_hotel_detail img {
     border-radius: 8px;
     object-fit: cover;
-}
-
-.detail_hotel_page .box_hotel_detail .watch-all-image {
-
 }
 
 .detail_hotel_page .box_hotel_detail .main-image,

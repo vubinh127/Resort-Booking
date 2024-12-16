@@ -87,3 +87,10 @@ function updatePassengerCount() {
 
     $('.hotel-info-passenger').val(roomCount + ' phòng, ' + (parseInt(adultCount) + parseInt(childCount)) + ' khách');  
 }  
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0, 
+        behavior: 'smooth'
+    });
+}
