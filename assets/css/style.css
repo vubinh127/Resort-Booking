@@ -703,6 +703,42 @@ div.datepicker-days table.table-condensed tbody td.day.active {
     color: #1d1d1d;
 }
 
+.content-introduce .content {
+    max-height: 570px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.5s ease;
+}
+
+.content-introduce .content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.content-introduce .content.expanded::after {
+    display: none;
+}
+
+
+.content-introduce .toggle-button {
+    color: #038af1;
+    border: 1px solid #038af1;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 35px;
+    display: inline-block;
+    line-height: 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #fff;
+}
+
 ul.ul-list-city {
     margin: 0;
     padding: 0;

@@ -55,6 +55,22 @@ $(document).ready(function() {
     $(".slider-box-show-price .from").text($("#hotel-cat-slider-range").slider("values", 0).toLocaleString());
     $(".slider-box-show-price .to").text($("#hotel-cat-slider-range").slider("values", 1).toLocaleString());
 
+    var $contentWrapper = $('.content-introduce .content');
+    var $toggleButton = $('.toggle-button');
+
+    if ($contentWrapper[0].scrollHeight <= 570) {
+        $toggleButton.hide();
+    }
+
+    $toggleButton.on('click', function () {
+        if ($contentWrapper.hasClass('expanded')) {
+            $contentWrapper.removeClass('expanded').css('max-height', '570px');
+            $toggleButton.text('Xem thêm');
+        } else {
+            $contentWrapper.addClass('expanded').css('max-height', $contentWrapper[0].scrollHeight + 'px');
+            $toggleButton.text('Thu gọn');
+        }
+    });
 });  
 
 
