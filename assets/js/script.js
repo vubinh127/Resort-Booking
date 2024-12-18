@@ -1,5 +1,11 @@
-$(document).ready(function() { 
-    
+$(document).ready(function() {
+
+    $('#hotel-name').select2({
+        placeholder: "Nhập địa điểm hoặc tên khách sạn",
+        allowClear: true,
+        minimumInputLength: 1,
+    });
+
     var today = new Date();
 
     $('.hotel-date-start').datepicker({
@@ -71,7 +77,21 @@ $(document).ready(function() {
             $toggleButton.text('Thu gọn');
         }
     });
-});  
+
+    if ($(window).width() < 992) {
+        // Xử lý click vào button toggle
+        $('.nav-item.dropdown .dropdown-toggle').on('click', function (e) {
+            e.preventDefault(); // Ngăn chặn hành động mặc định của button
+            var parent = $(this).closest('.nav-item.dropdown'); // Lấy parent .nav-item.dropdown
+
+            // Toggle class 'open' để hiển thị menu
+            parent.toggleClass('open');
+
+            // Đóng các menu khác nếu có
+            $('.nav-item.dropdown').not(parent).removeClass('open');
+        });
+    }
+});
 
 
 function adjustRoomCount(change) {  

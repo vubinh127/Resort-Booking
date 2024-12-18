@@ -186,8 +186,12 @@ border: 1xp solid #fff;
     color: #fff;
 }
 
+.header-box-full-top .navbar-nav li.nav-item .btn.dropdown-toggle {
+    color: #fff !important;
+}
+
 .header-box-full-top .navbar-nav a.nav-link{ 
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
     line-height: 60px;
     font-size: 14px;
@@ -266,23 +270,18 @@ border: 1xp solid #fff;
 @media (max-width: 992px) {
     .header-box-full-top .nav-item.dropdown .dropdown-menu {
         display: none;
-        position: static;
-        background-color: #f8f9fa;
-        box-shadow: none;
     }
 
     .header-box-full-top .nav-item.dropdown.open .dropdown-menu {
         display: block;
     }
 
-    .header-box-full-top .nav-item.dropdown .nav-link {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .dropdown-toggle::after {
-        display: none;
+    .header-box-full-top .nav-item.dropdown .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        border: none;
     }
 }
 
@@ -396,6 +395,30 @@ border: 1xp solid #fff;
     top: 55px;
 }
 
+.box_select_2 .select2-container {
+    width: 100% !important;
+}
+
+.hotel-box-form-search .select2-container--default .select2-selection--single {
+    height: 50px;
+    background-color: #f0f2f5;
+}
+
+.hotel-box-form-search .select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding-left: 35px;
+}
+
+.hotel-box-form-search .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 50px;
+}
+
+.hotel-box-form-search .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
 
 .hotel-box-form-search.type-cat .hotel-box-form-search-inner .input-daterange {
     display: grid;
@@ -724,7 +747,6 @@ div.datepicker-days table.table-condensed tbody td.day.active {
 .content-introduce .content.expanded::after {
     display: none;
 }
-
 
 .content-introduce .toggle-button {
     color: #038af1;
