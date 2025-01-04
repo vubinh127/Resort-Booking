@@ -2356,3 +2356,25 @@ ul.ul-list-app li {
         grid-template-columns: auto;
     }
 }
+
+.list-btn-hotel {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.list-btn-hotel button {
+    background-color: #f0f2f5;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    color: #15284a;
+    padding: 5px 15px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.list-btn-hotel button.active {
+    background-color: #ff5e1f;
+    color: #fff;
+}
