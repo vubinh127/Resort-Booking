@@ -91,6 +91,11 @@ $(document).ready(function() {
             $('.nav-item.dropdown').not(parent).removeClass('open');
         });
     }
+
+    $('.like-icon').click(function(event) {
+        event.preventDefault();
+        $(this).toggleClass('liked');
+    });
 });
 
 
