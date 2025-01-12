@@ -544,7 +544,13 @@ div.datepicker-days table.table-condensed tbody td.day.active {
 
 .hotel-cat-box-content .item {
     overflow: hidden; 
-    transition: transform 0.3s
+    transition: transform 0.3s;
+}
+
+.hotel-cat-box-content .hotel_slide .item {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px;
+    border-radius: 8px;
+    background: white;
 }
 
 .item:hover .box-img img {
@@ -589,6 +595,15 @@ div.datepicker-days table.table-condensed tbody td.day.active {
     display: flex;
 }
 
+.hotel-cat-box-content .item .box-content .category {
+    border-radius: 8px;
+    background: #f0f2f5;
+    border: 1px solid #cad2de ;
+    font-size: 12px;
+    padding: 5px 3px;
+    color: #4d5767;
+}
+
 .hotel-cat-box-content .item .box-content .box-title {
     font-size: 15px;
     color: #15284a;
@@ -610,6 +625,11 @@ div.datepicker-days table.table-condensed tbody td.day.active {
     overflow: hidden;
 }
 
+.hotel-cat-box-content .hotel_slide .item .box-content .box-rating-price {
+    font-weight: 700;
+    height: 44px;
+}
+
 .hotel-cat-box-content .item .box-content .box-rating-price {
     font-size: 16px;
     color: #ff9000;
@@ -622,6 +642,42 @@ div.datepicker-days table.table-condensed tbody td.day.active {
     font-size: 12px;
     text-decoration: line-through;
     margin-bottom: 2px;
+}
+
+.hotel-cat-box-content .item .box-content .box-rating-price span {
+    color: #9aa2b2;
+}
+
+.like-icon {
+    display: flex;
+    border-radius: 8px;
+    background: #f0f2f5;
+    border: 1px solid #cad2de;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.like-icon.liked svg {
+    stroke: red;
+}
+
+.like-icon.liked svg path {
+    fill: red;
+}
+
+.hotel-cat-box-content .hotel_slide{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .hotel-cat-box-content .hotel_slide{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 

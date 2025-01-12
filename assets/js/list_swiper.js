@@ -3,16 +3,6 @@ var swiperBanner = new Swiper(".banner_slide", {
     loop:  true
 });
 
-var swiperHotel = new Swiper(".hotel_slide", {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    breakpoints: {
-        992: {
-            slidesPerView: 3
-        }
-    }
-});
-
 var swiperHotelCombo = new Swiper(".hotel_combo_slide", {
     slidesPerView: 2,
     spaceBetween: 10,
